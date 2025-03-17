@@ -332,6 +332,11 @@ img {
   opacity: .3;
 }
 
+footer{
+  background: var(--body-color);
+  color: var(--text-color-light);
+}
+
 /* Animation ethereum */
 @keyframes float-eth {
   0%{
