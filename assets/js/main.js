@@ -49,3 +49,5 @@ sr.reveal(`.home__description`, {delay: 1200})
 sr.reveal(`.home__button`, {delay: 1400})
 sr.reveal(`.home__footer`, {delay: 1600})
 sr.reveal(`.home__footer div`, {origin: 'right', interval:100, delay: 1800})
+
+/*=============== SLIDER ===============*/
