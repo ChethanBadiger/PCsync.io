@@ -69,8 +69,24 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
 
 
 //sending info to php
-const registerBtn = $("#register_btn");
-const loginBtn = $("#login_btn");
 
-const loginForm = $("#login_form");
-const registerForm = $("#register_form");
+function register() {
+    $.ajax({
+        type: 'POST',
+        url: 'register.php',
+        data: {
+            name: $('#username').val(),
+            email: $('#registerEmail').val(),
+            pass: $('#registerPassword').val(),
+        },
+        success: function(res) {
+            console.log(res);
+        }
+    });
+}
+
+// const registerBtn = $("#register_btn");
+// const loginBtn = $("#login_btn");
+
+// const loginForm = $("#login_form");
+// const registerForm = $("#register_form");
