@@ -12,6 +12,7 @@ require 'connect.php';
     $insert_query->bindParam(1, $_POST['name']);
     $insert_query->bindParam(2, $_POST['email']);
     $insert_query->bindParam(3, $_POST['pass']);
+    $insert_query->execute();
 // }
 
 if($insert_query->execute()){
