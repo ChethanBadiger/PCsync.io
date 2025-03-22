@@ -38,10 +38,6 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         alert('Please fill in all fields');
         return;
     }
-
-    // Mock successful login
-    alert('Login successful!');
-    window.location.href = 'index.html';
 });
 
 document.getElementById('registerForm').addEventListener('submit', function (e) {
@@ -73,7 +69,7 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
 function register() {
     $.ajax({
         type: 'POST',
-        url: 'register.php',
+        url: '../register.php',
         data: {
             name: $('#username').val(),
             email: $('#registerEmail').val(),
@@ -85,8 +81,16 @@ function register() {
     });
 }
 
-// const registerBtn = $("#register_btn");
-// const loginBtn = $("#login_btn");
-
-// const loginForm = $("#login_form");
-// const registerForm = $("#register_form");
+function login() {
+    $.ajax({
+        type: 'POST',
+        url: '../login.php',
+        data: {
+            email: $('#loginEmail').val(),
+            pass: $('#loginPassword').val(),
+        },
+        success: function(res) {
+            console.log(res);
+        }
+    });
+}
