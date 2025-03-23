@@ -1,0 +1,191 @@
+/*=============== THEME VARIABLES ===============*/
+:root {
+    /* Colors */
+    --primary-color: #4CAF50;
+    --primary-color-alt: #43A047;
+    --title-color: #f1f3f2;
+    --text-color: #c3c3c3;
+    --text-color-light: #7B7B7B;
+    --container-color: #212121;
+    --container-color-alt: #181818;
+    --container-color-rgb: 33, 33, 33;
+    --border-color: #2c2c2c;
+
+    /* Font sizes */
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+
+    /* Font weights */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* Z-index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /* Transitions */
+    --transition-duration: 0.3s;
+    --transition-timing: ease;
+}
+
+/*=============== BASE STYLES ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--container-color-alt);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CLASSES ===============*/
+.section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: var(--h1-font-size);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/*=============== BUTTONS ===============*/
+.button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: var(--font-medium);
+    transition: var(--transition-duration) var(--transition-timing);
+    cursor: pointer;
+    border: none;
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+    color: var(--title-color);
+}
+
+.button--primary:hover {
+    background-color: var(--primary-color-alt);
+}
+
+.button--outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.button--outline:hover {
+    background-color: var(--primary-color);
+    color: var(--title-color);
+}
+
+/*=============== FORM ELEMENTS ===============*/
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: var(--container-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    transition: var(--transition-duration) var(--transition-timing);
+}
+
+.input-field:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/*=============== CARDS ===============*/
+.card {
+    background-color: var(--container-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-duration) var(--transition-timing);
+}
+
+.card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*=============== RESPONSIVE DESIGN ===============*/
+@media screen and (max-width: 768px) {
+    :root {
+        --h1-font-size: 1.75rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+}

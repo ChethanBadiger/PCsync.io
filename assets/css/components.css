@@ -1,0 +1,151 @@
+/*=============== COMPONENT STYLES ===============*/
+
+/* Platform Selector */
+.platform-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.platform-selector button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--text-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition-duration) var(--transition-timing);
+}
+
+.platform-selector button.active,
+.platform-selector button:hover {
+    background-color: var(--primary-color);
+    color: var(--title-color);
+}
+
+/* Component Selection */
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.spec-details {
+    background: var(--container-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.spec-details select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--container-color-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.spec-details select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Compatibility Status */
+.compatibility-status {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: var(--small-font-size);
+}
+
+.compatibility-status.compatible {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+}
+
+.compatibility-status.incompatible {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #F44336;
+}
+
+.compatibility-status i {
+    margin-right: 0.5rem;
+}
+
+/* Build Summary */
+.total-price-display {
+    background: var(--container-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.component-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: var(--container-color-alt);
+}
+
+.component-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.price-tag {
+    color: var(--primary-color);
+    font-weight: var(--font-medium);
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+/* Performance Metrics */
+.specs-details {
+    background: var(--container-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.specs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.specs-list i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .platform-selector {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .component-entry {
+        flex-direction: column;
+    }
+
+    .price-tag {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
