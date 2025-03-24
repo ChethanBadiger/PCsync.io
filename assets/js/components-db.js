@@ -1,5 +1,4 @@
 const componentsDB = {
-    // Image paths for component types
     
     cpu: {
         intel: [

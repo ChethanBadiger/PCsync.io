@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -129,6 +129,204 @@
                             </div>
                         </div>
 
+                        <button id="placeOrder" type="submit" class="button checkout__button" onclick="placeOrder()">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">PCSync.io</a>
+                <p class="footer__description">
+                    Your trusted source for <br>
+                    pre-owned PC components.
+                </p>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Company</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">About</a></li>
+                    <li><a href="#" class="footer__link">Terms</a></li>
+                    <li><a href="#" class="footer__link">Privacy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Support</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">FAQs</a></li>
+                    <li><a href="#" class="footer__link">Support</a></li>
+                    <li><a href="#" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy">© 2024 PCSync.io. All rights reserved</span>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCSync.io - Checkout</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="iindex.html" class="nav__logo">PCSync.io</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="iindex.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="compatibility.html" class="nav__link">Compatibility</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="price-tracker.html" class="nav__link">Prices</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Shop</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="checkout section container">
+            <h2 class="section__title">Checkout</h2>
+            <div class="checkout__container">
+                <div class="checkout__form">
+                    <form id="checkoutForm">
+                        <div class="form__section">
+                            <h3>Shipping Information</h3>
+                            <div class="form__group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" required>
+                            </div>
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" required>
+                                </div>
+                                <div class="form__group">
+                                    <label for="pincode">PIN Code</label>
+                                    <input type="text" id="pincode" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__section">
+                            <h3>Payment Method</h3>
+                            <div class="payment__options">
+                                <div class="payment__option">
+                                    <input type="radio" id="card" name="payment" value="card" checked>
+                                    <label for="card">Credit/Debit Card</label>
+                                </div>
+                                <div class="payment__option">
+                                    <input type="radio" id="upi" name="payment" value="upi">
+                                    <label for="upi">UPI</label>
+                                </div>
+                                <div class="payment__option">
+                                    <input type="radio" id="netbanking" name="payment" value="netbanking">
+                                    <label for="netbanking">Net Banking</label>
+                                </div>
+                                <div class="payment__option">
+                                    <input type="radio" id="cod" name="payment" value="cod">
+                                    <label for="cod">Cash on Delivery</label>
+                                </div>
+                            </div>
+
+                            <div id="cardDetails" class="payment__details">
+                                <div class="form__group">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__group">
+                                        <label for="expiry">Expiry Date</label>
+                                        <input type="text" id="expiry" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="password" id="cvv" maxlength="3">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="upiDetails" class="payment__details" style="display: none;">
+                                <div class="form__group">
+                                    <label for="upiId">UPI ID</label>
+                                    <input type="text" id="upiId" placeholder="username@bankname">
+                                </div>
+                            </div>
+
+                            <div id="netbankingDetails" class="payment__details" style="display: none;">
+                                <div class="form__group">
+                                    <label for="bankSelect">Select Bank</label>
+                                    <select id="bankSelect">
+                                        <option value="">Choose your bank</option>
+                                        <option value="sbi">State Bank of India</option>
+                                        <option value="hdfc">HDFC Bank</option>
+                                        <option value="icici">ICICI Bank</option>
+                                        <option value="axis">Axis Bank</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order__summary">
+                            <h3>Order Summary</h3>
+                            <div class="summary__details">
+                                <div class="summary__row">
+                                    <span>Subtotal:</span>
+                                    <span id="checkout-subtotal">₹0</span>
+                                </div>
+                                <div class="summary__row">
+                                    <span>Shipping:</span>
+                                    <span id="checkout-shipping">₹0</span>
+                                </div>
+                                <div class="summary__row total">
+                                    <span>Total:</span>
+                                    <span id="checkout-total">₹0</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <button id="placeOrder" type="submit" class="button checkout__button">Place Order</button>
                     </form>
                 </div>
@@ -170,6 +368,8 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/modal.js"></script>
+
 </body>
 
 </html>

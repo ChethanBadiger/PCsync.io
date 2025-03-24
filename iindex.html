@@ -23,8 +23,20 @@
                 <a href="index.html" class="nav__logo">PCSync.io</a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="compatibility.html" class="nav__link">Compatibility</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="price-tracker.html" class="nav__link">Prices</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="shop.html" class="nav__link active-link">Shop</a>
+                        </li>
                         <li class="nav__item" id="auth-link">
-                            <a href="auth.html" class="nav__link">Login/Register</a>
+                            <button id="openOverlay" class="pro__link" data-bs-toggle="modal" data-bs-target="#exampleModal">Profile</button>
                         </li>
                     </ul>
                     <div class="nav__close" id="nav-close">
@@ -37,7 +49,7 @@
             </nav>
         </header>
         <!-- Profile Model -->
-        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -59,11 +71,11 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button"  class="btn btn-secondary" data-bs-dismiss="modal" onclick="window.location.href='index.html'">Log out</button>
       </div>
     </div>
   </div>
-</div> -->
+</div>
         <!--==================== MAIN ====================-->
         <main class="main">
             <!--==================== HOME ====================-->
@@ -82,7 +94,7 @@
                         <p class="home__description">
                             Explore on the world best largest custom PC marketplace.
                         </p>
-                        <a href="#" class="home__button" onclick="alert('Please login first'); return false;">Explore</a>
+                        <a href="compatibility.html" class="home__button">Explore</a>
                     </div>
 
                     <div class="home__group">
@@ -132,7 +144,7 @@
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h5 mb-0">₹69,999</span>
-                                <a href="#" class="button product__button" onclick="alert('Please login first'); return false;">View Details</a>
+                                <a href="shop.html" class="button product__button">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -152,7 +164,7 @@
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h5 mb-0">₹59,999</span>
-                                <a href="#" class="button product__button" onclick="alert('Please login first'); return false;">View Details</a>
+                                <a href="shop.html" class="button product__button">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -172,7 +184,7 @@
                             </div>
                             <div class="d-flex justify-content-between align-items-center ">
                                 <span class="h5 mb-0">₹89,999</span>
-                                <a href="#" class="button product__button" onclick="alert('Please login first'); return false;">View Details</a>
+                                <a href="shop.html" class="button product__button">View Details</a>
                             </div>
                         </div>
                     </div>

@@ -1,17 +1,5 @@
 <?php
 require 'connect.php';
-
-    // $stmt = $con->prepare("SELECT ? FROM register WHERE email = ?");
-    // $stmt->bindParam(1, $_POST['pass']);
-    // $stmt->bindParam(2, $_POST['email']);
-
-    // if ($stmt->execute()) {
-    //     echo "pass";
-    // } else {
-    //     echo "fail";
-    // }
-    
-   
     $login_query = $con->prepare("SELECT password FROM register WHERE email = ?");
     $login_query->bindParam(1, $_POST['email']);
     $login_query->execute();
@@ -30,6 +18,5 @@ require 'connect.php';
     } else {
         echo "emailNotFound"; // Email not found
     }
-
-
 ?>
+

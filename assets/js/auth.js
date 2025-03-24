@@ -78,6 +78,8 @@ function register() {
         success: function(res) {
             const user = JSON.parse(res);
             console.log(user);
+            user[0] = document.getElementById("username");
+            user[1] = document.getElementById("email");
         }
     });
 }
@@ -91,8 +93,16 @@ function login() {
             pass: $('#loginPassword').val(),
         },
         success: function(res) {
-            window.location.href = 'index.html'
-            location.reload(); // Reloads page to reflect changes
+            console.log(res);
+            if (res.trim() == "true") {
+                alert("successfully logged-in");
+                window.location.href = 'iindex.html';
+            } else if (res.trim() == "false") {
+                alert("check your credentials");
+            }
+            else{
+                alert ("email not found please register");
+            }
         }
     });
 }

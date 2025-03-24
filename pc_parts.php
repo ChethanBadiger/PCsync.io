@@ -68,6 +68,8 @@ $query = "SELECT * FROM pc_cases";
 $result = $conn->query($query);
 $data['pc_cases'] = $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
 
+echo "hello world";
+
 echo "<pre>";
 var_dump($data);
 echo "</pre>";

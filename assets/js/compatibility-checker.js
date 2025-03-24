@@ -23,12 +23,12 @@ function populateDropdowns() {
 
     // Add Intel CPUs
     componentsDB.cpu.intel.forEach(cpu => {
-        intelGroup.innerHTML += `<option value="${cpu.id}">${cpu.name} - ₹${cpu.price.toLocaleString()}</option>`;
+        intelGroup.innerHTML += `<option value="${cpu.id}" style="color: black;">${cpu.name} - ₹${cpu.price.toLocaleString()}</option>`;
     });
 
     // Add AMD CPUs
     componentsDB.cpu.amd.forEach(cpu => {
-        amdGroup.innerHTML += `<option value="${cpu.id}">${cpu.name} - ₹${cpu.price.toLocaleString()}</option>`;
+        amdGroup.innerHTML += `<option value="${cpu.id}" style="color: black;">${cpu.name} - ₹${cpu.price.toLocaleString()}</option>`;
     });
 
     // Populate other component dropdowns
@@ -65,7 +65,7 @@ function populateComponentDropdown(componentType) {
 
 // Create HTML for dropdown option
 function createOptionHTML(component) {
-    return `<option value="${component.id}">${component.name} - ₹${component.price.toLocaleString()}</option>`;
+    return `<option value="${component.id}" style="color: black;">${component.name} - ₹${component.price.toLocaleString()}</option>`;
 }
 
 // Handle component selection change
@@ -501,5 +501,5 @@ function saveConfiguration() {
     // Save to localStorage
     localStorage.setItem('savedConfiguration', JSON.stringify(configuration));
     alert('Configuration saved successfully!');
+    location.reload();
 }
-
