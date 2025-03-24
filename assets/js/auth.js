@@ -76,7 +76,8 @@ function register() {
             pass: $('#registerPassword').val(),
         },
         success: function(res) {
-            console.log(res);
+            const user = JSON.parse(res);
+            console.log(user);
         }
     });
 }
@@ -90,7 +91,8 @@ function login() {
             pass: $('#loginPassword').val(),
         },
         success: function(res) {
-            console.log(res);
+            window.location.href = 'index.html'
+            location.reload(); // Reloads page to reflect changes
         }
     });
 }

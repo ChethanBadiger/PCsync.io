@@ -50,4 +50,25 @@ sr.reveal(`.home__button`, {delay: 1400})
 sr.reveal(`.home__footer`, {delay: 1600})
 sr.reveal(`.home__footer div`, {origin: 'right', interval:100, delay: 1800})
 
-/*=============== SLIDER ===============*/
+document.addEventListener("DOMContentLoaded", function() {
+    const overlay = document.getElementById("overlay");
+    const openOverlay = document.getElementById("open-overlay");
+    const closeOverlay = document.getElementById("close-overlay");
+
+    // Open overlay
+    openOverlay.addEventListener("click", function() {
+        overlay.classList.add("active");
+    });
+
+    // Close overlay
+    closeOverlay.addEventListener("click", function() {
+        overlay.classList.remove("active");
+    });
+
+    // Close when clicking outside the overlay content
+    overlay.addEventListener("click", function(event) {
+        if (event.target === overlay) {
+            overlay.classList.remove("active");
+        }
+    });
+});
